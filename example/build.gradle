@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "bongloy.com.bongloy"
+        applicationId "com.android.bongloy"
         minSdkVersion 15
         targetSdkVersion 28
         versionCode 1
@@ -21,8 +21,8 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:28.0.0'
+//    implementation 'com.android.support:design:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-    implementation 'com.stripe:stripe-android:8.1.0'
     implementation 'com.android.support:recyclerview-v7:28.0.0'
     implementation 'com.squareup.retrofit2:retrofit:2.3.0'
     /* Used to make Retrofit easier and GSON & Rx-compatible*/
@@ -39,13 +39,13 @@ dependencies {
     implementation 'com.squareup.okio:okio:1.13.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.9.0'
     implementation 'com.github.thomper:sweet-alert-dialog:v1.4.0'
-    implementation 'com.github.khomsovon:bongloy-android:1.0'
 
     implementation 'it.michelelacorte.swipeablecard:library:2.2.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation project(':bongloy')
+    implementation 'com.stripe:stripe-android:8.1.0'
     implementation 'com.github.khomsovon:CreditCardView:v1.0.5'
     implementation 'com.rengwuxian.materialedittext:library:2.1.4'
 

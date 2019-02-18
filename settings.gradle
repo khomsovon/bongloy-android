@@ -1,1 +1,1 @@
-include ':bongloy'
+include ':bongloy',':example'

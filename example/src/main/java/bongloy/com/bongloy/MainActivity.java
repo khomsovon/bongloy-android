@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements IFocus {
     private ProgressDialogController mProgressDialogController;
 
     private static final String PUBLISHABLE_KEY =
-            "pk_test_56b6630429c92062953adac23cd7420386e55ce60eb465cd0ad3ab226c09eb6a";
+            "pk_test_2411c55a75ad6d004eaaf240f99b577dec6d6630789c06a23639967ae3c10572";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements IFocus {
 
         mContext = this;
 
-        PaymentConfiguration.init(PUBLISHABLE_KEY);
+        new Bongloy(mContext).setDefaultPublishableKey(PUBLISHABLE_KEY);
 
         Button buyButton = findViewById(R.id.btnBuy);
 
@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity implements IFocus {
         Card cardParam = new Card(mCardNumber, Integer.parseInt(splitEx(mExpiry)[0]), Integer.parseInt(splitEx(mExpiry)[1]), mCVV);
         new Bongloy(mContext).createToken(
                 cardParam,
-                PaymentConfiguration.getInstance().getPublishableKey(),
+                PUBLISHABLE_KEY,
                 new TokenCallback() {
                     public void onSuccess(Token token) {
                         completePurchase(token.getId(), amount());
