@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Bongloy</string>
+    <string name="amount">Amount</string>
+    <string name="validationErrors">Validation Errors</string>
+    <string name="progressMessage">Progressing&#8230;</string>
+    <string name="ok" >OK</string>
+    <string name="completing_purchase" />
+</resources>
