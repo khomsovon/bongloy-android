@@ -1,4 +1,4 @@
-package bongloy.com.bongloy.service;
+package bongloy.com.example.service;
 
 import java.util.Map;
 

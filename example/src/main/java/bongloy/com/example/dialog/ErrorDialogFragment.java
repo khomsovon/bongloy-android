@@ -1,4 +1,4 @@
-package bongloy.com.bongloy.dialog;
+package bongloy.com.example.dialog;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -6,7 +6,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 
-import bongloy.com.bongloy.R;
+import bongloy.com.example.R;
 
 public class ErrorDialogFragment extends DialogFragment {
     public static ErrorDialogFragment newInstance(int titleId, String message) {

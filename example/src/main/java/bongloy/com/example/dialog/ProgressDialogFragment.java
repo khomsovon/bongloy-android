@@ -1,4 +1,4 @@
-package bongloy.com.bongloy.dialog;
+package bongloy.com.example.dialog;
 
 import android.app.Dialog;
 import android.app.ProgressDialog;

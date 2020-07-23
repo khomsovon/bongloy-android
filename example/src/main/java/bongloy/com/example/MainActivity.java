@@ -1,4 +1,4 @@
-package bongloy.com.bongloy;
+package bongloy.com.example;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -16,7 +16,6 @@ import android.widget.EditText;
 
 import com.ontbee.legacyforks.cn.pedant.SweetAlert.SweetAlertDialog;
 import com.stripe.android.Bongloy;
-import com.stripe.android.PaymentConfiguration;
 import com.stripe.android.TokenCallback;
 import com.stripe.android.model.Card;
 import com.stripe.android.model.Token;
@@ -32,9 +31,9 @@ import com.cooltechworks.creditcarddesign.pager.IFocus;
 import java.util.HashMap;
 import java.util.Map;
 
-import bongloy.com.bongloy.controller.ErrorDialogHandler;
-import bongloy.com.bongloy.controller.ProgressDialogController;
-import bongloy.com.bongloy.service.BongloyService;
+import bongloy.com.example.controller.ErrorDialogHandler;
+import bongloy.com.example.controller.ProgressDialogController;
+import bongloy.com.example.service.BongloyService;
 import retrofit2.Retrofit;
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;

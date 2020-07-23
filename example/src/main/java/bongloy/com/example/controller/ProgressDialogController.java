@@ -1,11 +1,11 @@
-package bongloy.com.bongloy.controller;
+package bongloy.com.example.controller;
 
 import android.support.annotation.NonNull;
 import android.support.annotation.StringRes;
 import android.support.v4.app.FragmentManager;
 
-import bongloy.com.bongloy.R;
-import bongloy.com.bongloy.dialog.ProgressDialogFragment;
+import bongloy.com.example.R;
+import bongloy.com.example.dialog.ProgressDialogFragment;
 
 /**
  * Class used to show and hide the progress spinner.

@@ -1,9 +1,9 @@
-package bongloy.com.bongloy.controller;
+package bongloy.com.example.controller;
 
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentManager;
 
-import bongloy.com.bongloy.dialog.ErrorDialogFragment;
+import bongloy.com.example.dialog.ErrorDialogFragment;
 
 /**
  * A convenience class to handle displaying error dialogs.
@@ -18,7 +18,7 @@ public class ErrorDialogHandler {
 
     public void showError(String errorMessage) {
         DialogFragment fragment = ErrorDialogFragment.newInstance(
-                bongloy.com.bongloy.R.string.validationErrors, errorMessage);
+                bongloy.com.example.R.string.validationErrors, errorMessage);
         fragment.show(mFragmentManager, "error");
     }
 }

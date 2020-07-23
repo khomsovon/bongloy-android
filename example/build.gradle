@@ -4,17 +4,29 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.android.bongloy"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+        }
+    }
+    configurations {
+        cleanedAnnotations
+        compile.exclude group: 'org.jetbrains' , module:'annotations'
     }
 }
 
@@ -24,11 +36,11 @@ dependencies {
 //    implementation 'com.android.support:design:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     implementation 'com.android.support:recyclerview-v7:28.0.0'
-    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     /* Used to make Retrofit easier and GSON & Rx-compatible*/
-    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'com.squareup.retrofit2:adapter-rxjava:2.5.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
 
     /* Needed for RxAndroid */
     implementation 'io.reactivex:rxandroid:1.2.1'
@@ -36,18 +48,19 @@ dependencies {
 
     implementation 'com.android.support:cardview-v7:28.0.0'
 
-    implementation 'com.squareup.okio:okio:1.13.0'
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.0'
+    implementation 'com.squareup.okio:okio:2.6.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.7.2'
     implementation 'com.github.thomper:sweet-alert-dialog:v1.4.0'
 
     implementation 'it.michelelacorte.swipeablecard:library:2.2.0'
-    testImplementation 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.13'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation project(':bongloy')
     implementation 'com.stripe:stripe-android:8.1.0'
     implementation 'com.github.khomsovon:CreditCardView:v1.0.5'
     implementation 'com.rengwuxian.materialedittext:library:2.1.4'
+    implementation 'com.android.support:multidex:1.0.3'
 
 
 }

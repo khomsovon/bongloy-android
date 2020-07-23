@@ -1,4 +1,4 @@
-package bongloy.com.bongloy;
+package bongloy.com.example;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
