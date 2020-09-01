@@ -1,4 +1,13 @@
-apply plugin: 'com.android.library'
+plugins {
+    id 'com.android.library'
+    id 'checkstyle'
+
+    id 'maven'
+    id 'signing'
+    id 'maven-publish'
+
+    // make sure this line comes *after* you apply the Android plugin
+}
 
 android {
     compileSdkVersion 29
@@ -37,7 +46,6 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.stripe:stripe-android:8.1.0'
-
 }
 
-//apply from: 'deploy.gradle'
+apply from: 'deploy.gradle'
