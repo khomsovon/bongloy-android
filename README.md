@@ -13,7 +13,7 @@ No need to clone the repository or download any files -- just add this line to y
 ```
 implementation 'com.stripe:stripe-android:8.1.0'
 
-implementation 'com.github.bongloy-community:bongloy-android:1.0.3'
+implementation 'com.github.khomsovon:bongloy-android:1.0.3'
 ```
 
 And add it in your root build.gradle at the end of repositories:
